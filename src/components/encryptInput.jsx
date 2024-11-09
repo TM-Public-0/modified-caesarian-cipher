@@ -12,13 +12,29 @@ export default function EncryptInput({keyA, keyB}) {
         setEncryptInput(e.target.value)
         // setInput(e.target.value)
     };
+
+    function isNumericString(value) {
+        return /^\d+(\.\d+)?$/.test(value.trim());
+      }
     
     function handleKeyA(e){
-        setStateKeyA(e.target.value)
+        if (isNumericString(e.target.value)) {
+            setStateKeyA(e.target.value)
+        }
+        else {
+            document.getElementsByName('First Key')[0].value = '';
+            return false;
+        }
     };
     
     function handleKeyB(e){
-        setStateKeyB(e.target.value)
+        if (isNumericString(e.target.value)) {
+            setStateKeyB(e.target.value)
+        }
+        else {
+            document.getElementsByName('Second Key')[0].value = '';
+            return false;
+        }
     };
 
     function handleClear(){
@@ -38,15 +54,15 @@ export default function EncryptInput({keyA, keyB}) {
   return (
     <div className="container-input-fields"> 
         <div className="input-fields">
-                <label for="Encrypt Text">Enter text to encrypt</label>
+                <label htmlFor="Encrypt Text">Enter text to encrypt</label>
                 <input name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
             {/* <div>
             </div> */}
-                <label for="First Key">First Key</label>
+                <label htmlFor="First Key">First Key</label>
                 <input name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
             {/* <div>
             </div> */}
-                <label for="Second Key">Second Key</label>
+                <label htmlFor="Second Key">Second Key</label>
                 <input name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
             {/* <div> > */}
             <div />
@@ -56,9 +72,9 @@ export default function EncryptInput({keyA, keyB}) {
             </div>  
         </div>
 
-        <div>
+        <div style={{  }}>
             <h3>Output</h3>
-            <div>
+            <div style={{ display: 'flex', flexFlow: 'column wrap', gap:'0.5rem', maxHeight: '12vh' }}>
             {
                 encrypted.length > 0 && 
                 encrypted.map((each, key) => (
