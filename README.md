@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+This is a simple Caesarian Cipher encryption and decryption app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About this app
 
-## Available Scripts
+This app allows you to encrypt and decrypt text using a Caesarian Cipher.
+The app uses two keys to encrypt and decrypt the text.
 
-In the project directory, you can run:
+I promise that I do not store any of your information on any server. This app is purely for recreational purposes.
 
-### `npm start`
+I am not liable for the safety of your information. Please use this app responsibly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to use
 
-### `npm test`
+1. Enter the text you want to encrypt.
+2. Enter the first key.
+3. Enter the second key.
+4. Click on the "Encrypt!" button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About the keys
 
-### `npm run build`
+The keys are used to shift the letters in the alphabet, as well as the numbers and symbols. A simpler Caesarian Cipher would use only one key, but this one uses two keys to make it more secure. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you would like to come back to decrypt text that you previously encrypted on this website, you would need to know the keys used to encrypt said text.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## About the Caesarian Cipher
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Caesarian Cipher is a type of substitution cipher that was used by Julius Caesar. It is a simple way to encrypt and decrypt text. 
 
-### `npm run eject`
+It works by shifting the letters in the alphabet, as well as the numbers and symbols. The letters are shifted by the first key, and the numbers and symbols are shifted by the second key. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For example, if you want to encrypt the letter "A", you would shift it by the first key, which is 1. The letter "A" would become "B". 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For more information on the exact mechanism used by this app, please check out the source code.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For more information on the Caesarian Cipher please check out the wikipedia page: https://en.wikipedia.org/wiki/Caesar_cipher
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+** Fun fact: The Caesarian Cipher was named after Julius Caesar, who was a famous Roman general and statesman. In the context of childbirth, C-section, or Caesarian section, was also named after Julius Caesar, as he was slashed and stabbed to death by dissenting Roman senators.
