@@ -1,4 +1,4 @@
-This is a simple Caesarian Cipher encryption and decryption app.
+This is a modified Caesarian Cipher encryption and decryption app.
 
 ## About this app
 
@@ -35,4 +35,4 @@ For more information on the exact mechanism used by this app, please check out t
 
 For more information on the Caesarian Cipher please check out the wikipedia page: https://en.wikipedia.org/wiki/Caesar_cipher
 
-** Fun fact: The Caesarian Cipher was named after Julius Caesar, who was a famous Roman general and statesman. In the context of childbirth, C-section, or Caesarian section, was also named after Julius Caesar, as he was slashed and stabbed to death by dissenting Roman senators.
+** Fun fact: The Caesarian Cipher was named after Julius Caesar, who was a famous Roman general and statesman. He developed this cipher in order to encrypt letters to trusted advisors, as well as notes for himself. In the context of childbirth, C-section, or Caesarian section, was also named after Julius Caesar, as he was slashed and stabbed to death by Roman senators.

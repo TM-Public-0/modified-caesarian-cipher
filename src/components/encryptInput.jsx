@@ -47,9 +47,9 @@ export default function EncryptInput({keyA, keyB}) {
 
     }
 
-    useEffect(() => {
-        console.log(encrypted)
-    }, [encrypted])
+    // useEffect(() => {
+    //     console.log(encrypted)
+    // }, [encrypted])
 
   return (
     <div className="container-input-fields"> 
