@@ -1,9 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .container-input-fields {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-evenly;
   margin: auto;
-  width: 50%;
+  /* width: 50%; */
+}
+
+.container-input-fields div:nth-child(2) div {
+  flex-direction: column;
 }
 
 .input-fields {
@@ -14,4 +24,28 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
   row-gap: 1rem;
+  z-index: 1;
+}
+
+#output-col {
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: column wrap; */
+  flex-wrap: wrap;
+  gap: 0.5rem;  
+  /* max-height: 60vh; */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+
+#output-col code {
+  flex-direction: column;
+  flex-basis: calc(50% - 20px); /* Adjust based on gaps */
+  margin: 10px;
 }

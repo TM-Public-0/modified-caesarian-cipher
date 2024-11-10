@@ -4,11 +4,12 @@ import AuroraBackgroundDefault from "./background.jsx";
 import { TextGenerateEffect } from "./textGenerateEffect.jsx";
 
 
-export default function EncryptInput({keyA, keyB}) {
+export default function EncryptInput() {
     const [encryptInput, setEncryptInput] = useState('');
     const [stateKeyA, setStateKeyA] = useState('');
     const [stateKeyB, setStateKeyB] = useState('');
     const [encrypted, setEncrypted] = useState('');
+    const [showCode, setShowCode] = useState(true);
 
     function handleChange(e){
         setEncryptInput(e.target.value)
@@ -40,7 +41,13 @@ export default function EncryptInput({keyA, keyB}) {
     };
 
     function handleClear(){
-        window.confirm('Are you sure you want to clear?') && setEncrypted('')
+        window.confirm('Are you sure you want to clear?') && setShowCode(false)
+        setTimeout(() => {
+            setEncrypted('')
+            setShowCode(true)
+
+        }, 2.5 * 1000);
+        
         // setEncrypted('')
     };
 
@@ -55,18 +62,15 @@ export default function EncryptInput({keyA, keyB}) {
 
   return (
         <div className="container-input-fields"> 
-            <div className="input-fields">
+            <div className="input-fields text-white text-base">
                     <label htmlFor="Encrypt Text">Enter text to encrypt</label>
-                    <input name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
-                {/* <div>
-                </div> */}
+                    <input className="text-black font-bold" name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
+
                     <label htmlFor="First Key">First Key</label>
-                    <input name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
-                {/* <div>
-                </div> */}
+                    <input className="text-black font-bold" name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
+
                     <label htmlFor="Second Key">Second Key</label>
-                    <input name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
-                {/* <div> > */}
+                    <input className="text-black font-bold" name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
                 <div />
                 <div style={{display: 'flex', flexDirection: "column", justifyContent: 'space-between'}}>
                     <button disabled={encryptInput === '' ? true : false} onClick={handleOperation}>Encrypt!</button>
@@ -74,19 +78,15 @@ export default function EncryptInput({keyA, keyB}) {
                 </div>  
             </div>
 
-            <div style={{  }}>
-                <h3>Output</h3>
-                <div style={{ display: 'flex', flexFlow: 'column wrap', gap:'0.5rem', maxHeight: '12vh' }}>
+            <div>
+                <h3 className="text-white text-3xl font-bold">Output</h3>
+                <div id="output-col">
                 {
                     encrypted.length > 0 && 
                     encrypted.map((each, key) => (
-                        <>
-                            <code key={key + 1}>
-                                <TextGenerateEffect duration={0.4} filter={true} words={key + 1 + ')' + each} /> 
-                             </code>
-                            <br/>
-                            <br/>
-                        </>
+                        <code style={{ opacity: showCode === true ? 1 : 0, transition: '700ms'}} key={key + 1}>
+                            <TextGenerateEffect duration={0.4} filter={true} words={key + 1 + ')' + each} /> 
+                        </code>
                     ))
                 
                 }
