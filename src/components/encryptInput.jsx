@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { caesarEncrypt } from '../utils/cipher.js';
+import AuroraBackgroundDefault from "./background.jsx";
+import { TextGenerateEffect } from "./textGenerateEffect.jsx";
 
 
 export default function EncryptInput({keyA, keyB}) {
@@ -52,42 +54,44 @@ export default function EncryptInput({keyA, keyB}) {
     // }, [encrypted])
 
   return (
-    <div className="container-input-fields"> 
-        <div className="input-fields">
-                <label htmlFor="Encrypt Text">Enter text to encrypt</label>
-                <input name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
-            {/* <div>
-            </div> */}
-                <label htmlFor="First Key">First Key</label>
-                <input name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
-            {/* <div>
-            </div> */}
-                <label htmlFor="Second Key">Second Key</label>
-                <input name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
-            {/* <div> > */}
-            <div />
-            <div style={{display: 'flex', flexDirection: "column", justifyContent: 'space-between'}}>
-                <button disabled={encryptInput === '' ? true : false} onClick={handleOperation}>Encrypt!</button>
-                <button disabled={encrypted.length === 0 ? true : false} onClick={handleClear}>Clear Output</button>
-            </div>  
-        </div>
+        <div className="container-input-fields"> 
+            <div className="input-fields">
+                    <label htmlFor="Encrypt Text">Enter text to encrypt</label>
+                    <input name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
+                {/* <div>
+                </div> */}
+                    <label htmlFor="First Key">First Key</label>
+                    <input name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
+                {/* <div>
+                </div> */}
+                    <label htmlFor="Second Key">Second Key</label>
+                    <input name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
+                {/* <div> > */}
+                <div />
+                <div style={{display: 'flex', flexDirection: "column", justifyContent: 'space-between'}}>
+                    <button disabled={encryptInput === '' ? true : false} onClick={handleOperation}>Encrypt!</button>
+                    <button disabled={encrypted.length === 0 ? true : false} onClick={handleClear}>Clear Output</button>
+                </div>  
+            </div>
 
-        <div style={{  }}>
-            <h3>Output</h3>
-            <div style={{ display: 'flex', flexFlow: 'column wrap', gap:'0.5rem', maxHeight: '12vh' }}>
-            {
-                encrypted.length > 0 && 
-                encrypted.map((each, key) => (
-                    <>
-                        <code key={key + 1}>{key + 1}) {each}</code> 
-                        <br/>
-                        <br/>
-                    </>
-                ))
-            
-            }
+            <div style={{  }}>
+                <h3>Output</h3>
+                <div style={{ display: 'flex', flexFlow: 'column wrap', gap:'0.5rem', maxHeight: '12vh' }}>
+                {
+                    encrypted.length > 0 && 
+                    encrypted.map((each, key) => (
+                        <>
+                            <code key={key + 1}>
+                                <TextGenerateEffect duration={0.4} filter={true} words={key + 1 + ')' + each} /> 
+                             </code>
+                            <br/>
+                            <br/>
+                        </>
+                    ))
+                
+                }
+                </div>
             </div>
         </div>
-    </div>
   );
 }
