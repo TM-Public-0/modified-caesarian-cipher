@@ -1,12 +1,14 @@
 import './App.css';
 import AuroraBackgroundDefault, {AuroraBackground} from './components/background';
 import EncryptInput from './components/encryptInput';
+import Nav from './components/Nav.jsx';
 // import Input from './components/inputFields';
 
 function App() {
   return (
     <AuroraBackgroundDefault>
-      <header className=" font-bold text-white">
+      <Nav />
+      <header className="font-bold text-white mb-8">
         <h1 className='text-3xl' style={{ fontFamily: 'Georgia'}}><code>Modified Caesarian Cipher</code></h1>
         <h2 className='text-2xl'>
           <code>Encrypt and decrypt your information</code>

@@ -31,7 +31,8 @@ export const AuroraBackground = ({
     return (
         <div
         className="bg-black"
-        style={{ zIndex: -1}}
+        style={{ padding: '2rem'}}
+
         //   className={cn(
         //     "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
         //     className

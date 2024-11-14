@@ -10,6 +10,7 @@ export default function EncryptInput() {
     const [stateKeyB, setStateKeyB] = useState('');
     const [encrypted, setEncrypted] = useState('');
     const [showCode, setShowCode] = useState(true);
+    const [showTextArea, setShowTextArea] = useState(false);
 
     function handleChange(e){
         setEncryptInput(e.target.value)
@@ -51,6 +52,10 @@ export default function EncryptInput() {
         // setEncrypted('')
     };
 
+    function handleChangeInputOption() {
+        setShowTextArea(prev => !prev)
+    }
+
     function handleOperation(){
         setEncrypted([...encrypted, caesarEncrypt(encryptInput, stateKeyA, stateKeyB)])
 
@@ -64,17 +69,24 @@ export default function EncryptInput() {
         <div className="container-input-fields"> 
             <div className="input-fields text-white text-base">
                     <label htmlFor="Encrypt Text">Enter text to encrypt</label>
-                    <input className="text-black font-bold" name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
+                    {showTextArea === true ? 
+                        <textarea className="text-black font-bold opacity-60 rounded ps-2" placeholder={"Enter text to encrypt"} onChange={(e) => console.log(<pre>{e.target.value}</pre>)} />
+                    
+                    : 
+                        <input className="text-black font-bold opacity-60 rounded ps-2" name="Encrypt Text" type="text" placeholder={"Enter text to encrypt"} onChange={handleChange} />
+                    
+                    }
 
                     <label htmlFor="First Key">First Key</label>
-                    <input className="text-black font-bold" name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
+                    <input className="text-black font-bold opacity-60 rounded ps-2" name="First Key" type="text" placeholder={"First key"} onChange={handleKeyA} />
 
                     <label htmlFor="Second Key">Second Key</label>
-                    <input className="text-black font-bold" name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
+                    <input className="text-black font-bold opacity-60 rounded ps-2" name="Second Key" type="text" placeholder={"Second key"} onChange={handleKeyB} />
                 <div />
-                <div style={{display: 'flex', flexDirection: "column", justifyContent: 'space-between'}}>
+                <div id="container-buttons" style={{}}>
                     <button disabled={encryptInput === '' ? true : false} onClick={handleOperation}>Encrypt!</button>
                     <button disabled={encrypted.length === 0 ? true : false} onClick={handleClear}>Clear Output</button>
+                    <button onClick={handleChangeInputOption}>Write {showTextArea === false ? 'Longer' : 'Shorter'} Text?</button>
                 </div>  
             </div>
 
@@ -92,6 +104,7 @@ export default function EncryptInput() {
                 }
                 </div>
             </div>
+            
         </div>
   );
 }

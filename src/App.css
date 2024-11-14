@@ -49,3 +49,19 @@
   flex-basis: calc(50% - 20px); /* Adjust based on gaps */
   margin: 10px;
 }
+
+#container-buttons {
+  gap: 5px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+#container-buttons button {
+  border-radius: 5px;
+  box-shadow: ivory 0px 0px 30px -8px;
+}
+
+#about-text {
+  letter-spacing: 2px;
+}
