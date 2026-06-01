@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d6b2cb4.css",
-    "main.js": "/static/js/main.ace6c87e.js",
+    "main.css": "/static/css/main.36d8fa2f.css",
+    "main.js": "/static/js/main.caf83a2b.js",
+    "static/media/caesar-img-1.jpg": "/static/media/caesar-img-1.49fe5ca684da79defe84.jpg",
     "index.html": "/index.html",
-    "main.4d6b2cb4.css.map": "/static/css/main.4d6b2cb4.css.map",
-    "main.ace6c87e.js.map": "/static/js/main.ace6c87e.js.map"
+    "main.36d8fa2f.css.map": "/static/css/main.36d8fa2f.css.map",
+    "main.caf83a2b.js.map": "/static/js/main.caf83a2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d6b2cb4.css",
-    "static/js/main.ace6c87e.js"
+    "static/css/main.36d8fa2f.css",
+    "static/js/main.caf83a2b.js"
   ]
 }
