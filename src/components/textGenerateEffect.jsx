@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "./backgroundUtils.jsx";
+import { cn } from "../lib/utils/backgroundUtils.jsx";
 
 export const TextGenerateEffect = ({
   words,
@@ -17,7 +17,7 @@ export const TextGenerateEffect = ({
       filter: filter ? "blur(0px)" : "none",
     }, {
       duration: duration ? duration : 0.6,
-      delay: stagger(0.1),
+      delay: stagger(0.2),
     });
   }, [scope.current]);
 

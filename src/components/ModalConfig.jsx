@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "./backgroundUtils.jsx";
+import { cn } from "../lib/utils/backgroundUtils.jsx";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 

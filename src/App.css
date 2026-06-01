@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+p {
+  color: #dbdbdb;
+}
+
+input:invalid {
+  border: red solid 3px;
+}
 
 .container-input-fields {
   display: flex;
@@ -10,10 +17,11 @@
   justify-content: space-evenly;
   margin: auto;
   /* width: 50%; */
+  gap: 2rem
 }
 
 .container-input-fields div:nth-child(2) div {
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .input-fields {
@@ -25,6 +33,7 @@
   column-gap: 2rem;
   row-gap: 1rem;
   z-index: 1;
+  max-width: 40rem;
 }
 
 #output-col {
@@ -33,6 +42,7 @@
   /* flex-flow: column wrap; */
   flex-wrap: wrap;
   gap: 0.5rem;  
+  max-width: 50vw;
   /* max-height: 60vh; */
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -44,12 +54,21 @@
 
 }
 
+#output-col ol {
+  width: 70%;
+}
+
+#output-col ol li {
+  /* width: 16%; */
+  text-wrap:wrap;
+  overflow-wrap: break-word;
+}
+
 #output-col code {
   flex-direction: column;
   flex-basis: calc(50% - 20px); /* Adjust based on gaps */
   margin: 10px;
 }
-
 #container-buttons {
   gap: 5px;
   display: flex;
@@ -58,8 +77,18 @@
 }
 
 #container-buttons button {
-  border-radius: 5px;
-  box-shadow: ivory 0px 0px 30px -8px;
+  border: 1px solid #777;
+  border-radius: 6px;
+  box-shadow: ivory 0px 0px 10px -8px;
+  width: 10rem;
+  color: #dbdbdb;
+}
+
+#container-buttons button:hover {
+  background-color: #f0f0f028;
+  box-shadow: ivory 0px 0px 10px -8px;
+  transition: 250ms ease-in-out;
+
 }
 
 #about-text {

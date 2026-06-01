@@ -3,7 +3,6 @@ import ContactButtons from "./FloatingDocks.jsx";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "./ModalConfig.jsx";
 
 export default function AnimatedModal({trigger, children}) {
-    console.log('children', children)
     return (
         <Modal>
             <ModalTrigger className="dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">               

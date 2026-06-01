@@ -1,0 +1,19 @@
+- bug reporting
+
+
+Required:
+- accept pdf, docx, txt files as input for encryption
+- enable output to pdf, docx, txt files
+- enable output to clipboard
+
+- allow for any number as private keys
+- enable public key calculation
+
+- keep output format format the same as input format
+
+
+
+Nice to have:
+- enable output to sms
+- enable output to whatsapp
+- enable output to telegram

@@ -4,7 +4,7 @@
  * Mobile navbar is better positioned at bottom right.
  **/
 
-import { cn } from "./backgroundUtils.jsx";
+import { cn } from "../lib/utils/backgroundUtils.jsx";
 import { IconLayoutNavbarCollapse,
     IconBrandGithub,
     IconBrandLinkedin,
@@ -12,6 +12,7 @@ import { IconLayoutNavbarCollapse,
     IconBrandGithubFilled,
     IconMail,
     IconBriefcase2Filled,
+    IconBug,
  } from "@tabler/icons-react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 // import Link from "next/link";
@@ -171,27 +172,38 @@ function IconContainer({
 
 export default function ContactButtons(){
     const links = [
+        // {
+        //   title: "GitHub",
+        //   icon: (
+        //     <IconBrandGithubFilled className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        //   ),
+        //   href: "https://github.com/tmaldonado98",
+        // },
+        // {
+        //     title: "LinkedIn",
+        //     icon: (
+        //       <IconBrandLinkedinFilled className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        //     ),
+        //     href: "https://www.linkedin.com/in/tom%C3%A1s-maldonado-9b396420a/",
+        // },
         {
-          title: "GitHub",
-          icon: (
-            <IconBrandGithubFilled className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-          ),
-          href: "https://github.com/tmaldonado98",
-        },
-        {
-            title: "LinkedIn",
-            icon: (
-              <IconBrandLinkedinFilled className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "https://www.linkedin.com/in/tom%C3%A1s-maldonado-9b396420a/",
-        },
-        {
-            title: "Email Me!",
+            title: "Email Me",
             icon: (
               <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "mailto:tmaldonadotrs@gmail.com",
+            href: "mailto:v3swsmi2w@mozmail.com",
+            target: "_blank",
+            rel: "noopener noreferrer",
         },
+        {
+          title: "Report a Bug",
+          icon: (
+            <IconBug className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          ),
+          href: "mailto:v3swsmi2w@mozmail.com",
+          target: "_blank",
+          rel: "noopener noreferrer",
+      },
         // {
         //     title: "My Portfolio",
         //     icon: (

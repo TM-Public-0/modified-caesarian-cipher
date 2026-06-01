@@ -22,7 +22,7 @@ export default function Nav() {
       <h2 className="underline underline-offset-8">Home</h2>
          <AnimatedModal trigger={<EvervaultCard text="About/How To Use" />} children={<AboutChildren />} />  {/* this it the About button */}
          {/* <EvervaultCard text="About/How To Use" /> */}
-         <EvervaultCard text="Get the desktop app" />
+         {/* <EvervaultCard text="Get the desktop app" /> */}
 
           <MenuItem setActive={setActive} active={active} item="Contact">
               <div className="flex flex-col text-sm">
@@ -50,6 +50,7 @@ function AboutChildren() {
         <br/> <br/>
         <h3 className="font-bold text-center underline ">How To Use</h3>
         <blockquote>
+          *To keep your text data safe, encrypt your text. When you need to access the encrypted data, come here to decrypt * 
           Enter the text you want to encrypt. <br/>
           Enter the first key. <br/>
           Enter the second key. <br/>
